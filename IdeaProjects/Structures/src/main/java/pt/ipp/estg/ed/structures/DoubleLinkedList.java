@@ -35,8 +35,6 @@ public abstract class DoubleLinkedList<T> implements ListADT<T> {
         this.modCount++;
     }
 
-    //TESTADO
-
     /**
      * iterates through the list
      *
@@ -63,8 +61,6 @@ public abstract class DoubleLinkedList<T> implements ListADT<T> {
         }
     }
 
-    //TESTADO
-
     /**
      * Removes the head node in the list
      *
@@ -79,8 +75,6 @@ public abstract class DoubleLinkedList<T> implements ListADT<T> {
         return remove(first());
     }
 
-    //TESTADO
-
     /**
      * Removes the tail node in the list
      *
@@ -94,8 +88,6 @@ public abstract class DoubleLinkedList<T> implements ListADT<T> {
         }
         return remove(last());
     }
-
-    //TESTADO
 
     /**
      * Removes the head instance of the specified element from this list and
@@ -133,8 +125,6 @@ public abstract class DoubleLinkedList<T> implements ListADT<T> {
         return null;
     }
 
-    //TESTADO
-
     /**
      * Returns the head element of the list
      *
@@ -149,8 +139,6 @@ public abstract class DoubleLinkedList<T> implements ListADT<T> {
         return head.getNext().getElement();
     }
 
-    //TESTADO
-
     /**
      * Returns the tail element of the list
      *
@@ -164,8 +152,6 @@ public abstract class DoubleLinkedList<T> implements ListADT<T> {
         }
         return tail.getPrevious().getElement();
     }
-
-    //TESTADO
 
     /**
      * Checks if the list contains a certain element
@@ -184,8 +170,6 @@ public abstract class DoubleLinkedList<T> implements ListADT<T> {
         return false;
     }
 
-    //TESTADO
-
     /**
      * Checks if the list is empty
      *
@@ -195,8 +179,6 @@ public abstract class DoubleLinkedList<T> implements ListADT<T> {
     public boolean isEmpty() {
         return (count == 0);
     }
-
-    //TESTADO
 
     /**
      * Returns the size of the list
@@ -217,8 +199,6 @@ public abstract class DoubleLinkedList<T> implements ListADT<T> {
     public Iterator<T> iterator() {
         return new BasicIterator<>(this);
     }
-
-    //TESTADO
 
     /**
      * Turns the list into a string
@@ -242,37 +222,28 @@ public abstract class DoubleLinkedList<T> implements ListADT<T> {
         DoubleNode<T> current = head.getNext();
         DoubleNode<T> temp = null;
 
-        /*while (current != null) {
+        while (current != null && current != tail) {
             temp = current.getPrevious();
             current.setPrevious(current.getNext());
             current.setNext(temp);
+
             current = current.getPrevious();
         }
-*/
+
+        // Update tail after reversing
         tail.setPrevious(temp);
         if (temp != null) {
-            tail.setPrevious(temp);
+            temp.setNext(tail);
         }
 
-        head.getNext().setNext(null);
+        // Set the next of the original head to null
+        if (head.getNext() != null) {
+            head.getNext().setNext(null);
+        }
+
         if (temp != null && temp.getPrevious() != null) {
             head.setNext(temp.getPrevious());
             temp.getPrevious().setPrevious(head.getNext());
         }
-
-        while (current.getNext() != null) {
-            current = current.getNext();
-        }
-        //Shift head at tail of list
-        head = current;
-
-        //Let the magic begin
-        while (current != null) {
-            DoubleNode<T> prev = current.getPrevious();
-            current.setPrevious(current.getNext());
-            current.setNext(prev);
-            current = prev;
-        }
-
     }
 }
