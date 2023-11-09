@@ -17,7 +17,7 @@ jar {
         attributes 'Implementation-Title': 'bin.Bin'
         attributes 'Implementation-Version': 'build01'
         attributes 'Implementation-Vendor': 'ESTG'
-        attributes 'Main-Class': 'Bin'
+        attributes 'Main-Class': 'Demo.Bin'
     }
 }
 
