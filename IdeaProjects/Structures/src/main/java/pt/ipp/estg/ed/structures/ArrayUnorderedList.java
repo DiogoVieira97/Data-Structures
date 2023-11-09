@@ -20,7 +20,6 @@ public class ArrayUnorderedList<T> extends ArrayList<T> implements UnorderedList
         super();
     }
 
-    //TESTADO
     @Override
     public void addToFront(T element) {
         if (size() == list.length) {
@@ -34,7 +33,6 @@ public class ArrayUnorderedList<T> extends ArrayList<T> implements UnorderedList
         modCount++;
     }
 
-    //TESTADO
     @Override
     public void addToRear(T element) {
         if (size() == list.length) {
@@ -45,7 +43,6 @@ public class ArrayUnorderedList<T> extends ArrayList<T> implements UnorderedList
         modCount++;
     }
 
-    //TESTADO
     @Override
     public void addAfter(T element, T target) throws ElementNotFoundException {
         if (size() == list.length) {

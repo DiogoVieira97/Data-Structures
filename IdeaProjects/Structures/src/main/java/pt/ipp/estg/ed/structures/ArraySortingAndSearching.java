@@ -11,7 +11,6 @@ package main.java.pt.ipp.estg.ed.structures;
  */
 public class ArraySortingAndSearching {
 
-    //TESTADO
     /**
      * Searches the specified array of objects using a linear search algorithm.
      *
@@ -34,7 +33,6 @@ public class ArraySortingAndSearching {
         return found;
     }
 
-    //TESTADO
     /**
      * Searches the specified array of objects using a binary search algorithm.
      *
@@ -192,7 +190,6 @@ public class ArraySortingAndSearching {
         return right;
     }
 
-    //TESTADO
     /**
      * Sorts the specified array of objects using the merge sort algorithm.Recursive algorithm
      *

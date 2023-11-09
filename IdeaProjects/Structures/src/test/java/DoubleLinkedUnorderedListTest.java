@@ -1,12 +1,11 @@
-package main.java.pt.ipp.estg.ed.structures;
+package test.java;
 
 import main.java.pt.ipp.estg.ed.exceptions.EmptyCollectionException;
+import main.java.pt.ipp.estg.ed.structures.DoubleLinkedUnorderedList;
 import org.junit.jupiter.api.Test;
 
-import javax.swing.plaf.synth.SynthTextAreaUI;
-import java.awt.desktop.SystemEventListener;
-
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class DoubleLinkedUnorderedListTest {
 

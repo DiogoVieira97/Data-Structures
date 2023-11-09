@@ -1,9 +1,11 @@
-package main.java.pt.ipp.estg.ed.structures;
+package test.java;
 
 import main.java.pt.ipp.estg.ed.exceptions.EmptyCollectionException;
+import main.java.pt.ipp.estg.ed.structures.ArrayOrderedList;
+import main.java.pt.ipp.estg.ed.structures.ArrayUnorderedList;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class ArrayUnorderedListTest {
 

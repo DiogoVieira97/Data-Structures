@@ -33,7 +33,6 @@ public abstract class ArrayList<T> implements ListADT<T> {
         this.list = (T[]) (new Object[SIZE]);
     }
 
-    //TESTADO
     @Override
     public T removeFirst() throws EmptyCollectionException {
         if (isEmpty()) {
@@ -49,7 +48,6 @@ public abstract class ArrayList<T> implements ListADT<T> {
         return result;
     }
 
-    //TESTADO
     @Override
     public T removeLast() throws EmptyCollectionException {
         if (isEmpty()) {
@@ -63,7 +61,6 @@ public abstract class ArrayList<T> implements ListADT<T> {
         return result;
     }
 
-    //TESTADO
     @Override
     public T remove(T element) throws EmptyCollectionException {
         if (isEmpty()) {
@@ -89,7 +86,6 @@ public abstract class ArrayList<T> implements ListADT<T> {
         return result;
     }
 
-    //TESTADO
     @Override
     public T first() throws EmptyCollectionException {
         if (isEmpty()) {
@@ -98,7 +94,6 @@ public abstract class ArrayList<T> implements ListADT<T> {
         return list[front];
     }
 
-    //TESTADO
     @Override
     public T last() throws EmptyCollectionException {
         if (isEmpty()) {
@@ -107,7 +102,6 @@ public abstract class ArrayList<T> implements ListADT<T> {
         return list[rear - 1];
     }
 
-    //TESTADO
     public T get(int i) {
         if (i >= this.rear || i < 0) {
             throw new IndexOutOfBoundsException("Index: " + i + ", Size: " + i);
@@ -115,7 +109,6 @@ public abstract class ArrayList<T> implements ListADT<T> {
         return list[i];
     }
 
-    //TESTADO
     @Override
     public boolean contains(T target) {
         boolean found = false;
@@ -129,13 +122,11 @@ public abstract class ArrayList<T> implements ListADT<T> {
         return found;
     }
 
-    //TESTADO
     @Override
     public boolean isEmpty() {
         return rear == 0;
     }
 
-    //TESTADO
     @Override
     public int size() {
         return this.rear;
@@ -146,7 +137,6 @@ public abstract class ArrayList<T> implements ListADT<T> {
         return new BasicIterator<>();
     }
 
-    //TESTADO
     @Override
     public String toString() {
         String s = "ArrayList:\n";

@@ -1,6 +1,7 @@
-package main.java.pt.ipp.estg.ed.structures;
+package test.java;
 
 import main.java.pt.ipp.estg.ed.exceptions.EmptyCollectionException;
+import main.java.pt.ipp.estg.ed.structures.DoubleLinkedOrderedList;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;

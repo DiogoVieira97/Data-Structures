@@ -18,7 +18,6 @@ public class ArrayOrderedList<T> extends ArrayList<T> implements OrderedListADT<
         super();
     }
 
-    //TESTADO
     /**
      * adds an element to the list
      */
