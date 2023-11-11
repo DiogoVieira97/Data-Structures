@@ -5,6 +5,8 @@
  */
 package main.java.pt.ipp.estg.ed.structures;
 
+import main.java.pt.ipp.estg.ed.interfaces.StackADT;
+
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 
@@ -12,7 +14,7 @@ import java.util.NoSuchElementException;
  * @param <T>
  * @author xavie
  */
-public class LinkedStack<T> {
+public class LinkedStack<T> implements StackADT {
     private int n;          // size of the stack
     private LinearNode<T> first;     // top of stack
 
@@ -44,14 +46,15 @@ public class LinkedStack<T> {
     }
 
     /**
-     * Adds the item to this stack.
+     * Adds one element to the top of this stack.
      *
-     * @param item the item to add
+     * @param element element to be pushed onto stack
      */
-    public void push(T item) {
+    @Override
+    public void push(Object element) {
         LinearNode<T> oldfirst = first;
         first = new LinearNode<>();
-        first.setElement(item);
+        first.setElement((T) element);
         first.setNext(oldfirst);
         n++;
     }
@@ -89,8 +92,9 @@ public class LinkedStack<T> {
      */
     public String toString() {
         StringBuilder s = new StringBuilder();
-        while (this.iterator().hasNext()) {
-            s.append(this.iterator().next() + " ");
+        Iterator<T> iterator = this.iterator();
+        while(iterator.hasNext()) {
+            s.append(iterator.next() + "\n");
         }
         return s.toString();
     }

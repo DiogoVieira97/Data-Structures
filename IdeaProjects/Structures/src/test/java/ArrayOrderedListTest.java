@@ -98,4 +98,30 @@ class ArrayOrderedListTest {
         assertEquals(arr.size(), 2);
     }
 
+    static class ArrayStackTest {
+
+        @Test
+        void push() {
+        }
+
+        @Test
+        void pop() {
+        }
+
+        @Test
+        void peek() {
+        }
+
+        @Test
+        void isEmpty() {
+        }
+
+        @Test
+        void size() {
+        }
+
+        @Test
+        void testToString() {
+        }
+    }
 }

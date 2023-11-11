@@ -19,7 +19,7 @@ public class SmackStack<T> extends ArrayStack<T> implements SmackADT<T> {
      * looks at the bottom element without removing it
      *
      * @return the bottom element
-     * @throws pt.ipp.estg.pp.exceptions.EmptyCollectionException
+     * @throws main.java.pt.ipp.estg.ed.exceptions.EmptyCollectionException
      */
     @Override
     public T spy() throws EmptyCollectionException {
@@ -36,7 +36,7 @@ public class SmackStack<T> extends ArrayStack<T> implements SmackADT<T> {
      * removes the lowest element in the stack
      *
      * @return the removed element
-     * @throws pt.ipp.estg.pp.exceptions.EmptyCollectionException
+     * @throws main.java.pt.ipp.estg.ed.exceptions.EmptyCollectionException
      */
     @Override
     public T smack() throws EmptyCollectionException {
